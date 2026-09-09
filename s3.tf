@@ -21,6 +21,14 @@ bucket = aws_s3_bucket.one.id
 versioning_configuration {
 status = "Enabled"
 }
+
+terraform {
+backend "s3" {
+region = "us-east-1"
+bucket = "pavan77.flm77.moonobucket"
+key = "prod/terraform.tfstate"
+}
+}
 }
 
 
